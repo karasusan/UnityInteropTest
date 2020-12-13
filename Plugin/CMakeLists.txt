@@ -36,8 +36,8 @@ set_target_properties(unsafe
 )
 
 if(MSVC)
-  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -D_ITERATOR_DEBUG_LEVEL=0 /Zi")
-  set_target_properties(WebRTCPlugin
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /Zi /Od")
+  set_target_properties(unsafe
     PROPERTIES 
       MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
   )
